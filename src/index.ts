@@ -19,7 +19,7 @@ app
     credentials: true,
 
   }))
-  .group('/api/v1', (router) => router.use(rootRouter))
+  .group('/api/v2', (router) => router.use(rootRouter))
   .listen(process.env.PORT || 3048)
 
 console.log(

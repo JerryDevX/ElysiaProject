@@ -2,9 +2,6 @@ import { Elysia,t } from 'elysia'
 import db from '../db/database.service';
 
 
-
-// export default db
-
 const Data = async (body: {
     username: string;
     password: string;
@@ -27,7 +24,7 @@ const Data = async (body: {
     
 }
 
-const rootRouter = new Elysia({prefix:'/auth'})
+const rootRouter = new Elysia({prefix: '/auth'})
 .get('/', () =>  'Hello, World!')
 .post('/register', ({body}) => Data(body), {
     body: t.Object({
